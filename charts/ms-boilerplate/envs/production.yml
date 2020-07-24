@@ -1,0 +1,6 @@
+ingress:
+  base_host: api.igooods.ru
+
+image:
+  tag: latest
+  pullPolicy: IfNotPresent

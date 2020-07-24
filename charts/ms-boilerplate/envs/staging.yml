@@ -1,0 +1,5 @@
+ingress:
+  base_host: dev-api.igooods.ru
+
+image:
+  tag: staging
