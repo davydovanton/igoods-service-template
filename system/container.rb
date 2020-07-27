@@ -22,4 +22,4 @@ end
 
 Import = Container.injector
 
-require_relative './registration' unless Container[:settings].project_app == 'rake'
+require_relative './registration' unless Container[:settings].project_apps.include?('rake')

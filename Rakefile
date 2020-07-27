@@ -1,4 +1,4 @@
-PROJECT_APP='rake'
+PROJECT_APPS='rake'
 require_relative 'config/enviroment'
 require 'rom-sql'
 require 'rom/sql/rake_task'

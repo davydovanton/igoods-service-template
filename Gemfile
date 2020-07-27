@@ -26,6 +26,9 @@ gem 'dry-system'
 gem 'dry-monads'
 gem 'dry-validation'
 
+# Message broker
+gem "bunny", ">= 2.9.2"
+
 # Other
 gem 'bigdecimal', '1.4.2'
 gem 'rake'

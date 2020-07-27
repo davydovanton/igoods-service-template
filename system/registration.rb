@@ -15,8 +15,17 @@ class Container
   end
 
   # transport layer
-  auto_register!('apps/http') do |config|
-    config.memoize = true
-    config.instance(&:instance)
+  if self[:settings].project_apps.include?('http')
+    auto_register!('apps/http') do |config|
+      config.memoize = true
+      config.instance(&:instance)
+    end
+  end
+
+  if self[:settings].project_apps.include?('rabbitmq')
+    auto_register!('apps/rabbitmq') do |config|
+      config.memoize = true
+      config.instance(&:instance)
+    end
   end
 end

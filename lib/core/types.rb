@@ -12,6 +12,8 @@ module Core
       .default(:info)
       .enum(:trace, :unknown, :error, :fatal, :warn, :info, :debug)
 
+    ProjectApps = Array.constructor(proc { |value| value.to_s.downcase.split(',') }).of(Types::String)
+
     UUID = Strict::String.constrained(
       format: /\A(\h{32}|\h{8}-\h{4}-\h{4}-\h{4}-\h{12})\z/
     )

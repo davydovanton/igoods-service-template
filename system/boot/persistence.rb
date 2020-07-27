@@ -1,5 +1,5 @@
 Container.boot(:persistence) do |container|
-  unless container[:settings].project_app == 'rake'
+  unless container[:settings].project_apps.include?('rake')
     init do
       use :db
       config = container['db.config']

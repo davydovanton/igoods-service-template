@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-PROJECT_APP='http'
 require "bundler/setup"
+PROJECT_APP='rabbitmq'
 
 require_relative 'config/enviroment'
 
-run Container['http.app']
+Container['rabbitmq.app'].start('hello')

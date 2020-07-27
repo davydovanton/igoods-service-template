@@ -7,10 +7,12 @@ Container.boot(:settings, from: :system) do
     Types = Core::Types
 
     key :project_env, Types::String
-    key :project_app, Types::String.default('main')
+    key :project_apps, Types::ProjectApps
 
     key :database_url, Types::String.constrained(filled: true)
     # key :database_connection_validation_timeout, Types::Coercible::Int.optional # in seconds
+
+    key :rabbitmq_url, Types::String.constrained(filled: true)
 
     key :logger_json_formatter, Types::String.optional
     key :logger_level,          Types::LoggerLevel
