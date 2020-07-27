@@ -3,9 +3,9 @@ class Container
     config.memoize = true
     config.instance(&:instance)
 
-    # config.exclude do |component|
-    #   component.path =~ /entities/
-    # end
+    config.exclude do |component|
+      component.path =~ /consumer/
+    end
   end
 
   # business logic

@@ -2,7 +2,7 @@
 # frozen_string_literal: true
 
 require "bundler/setup"
-ENV['PROJECT_APP'] = 'rabbitmq'
+ENV['PROJECT_APPS'] = 'rabbitmq'
 
 require_relative '../config/enviroment'
 

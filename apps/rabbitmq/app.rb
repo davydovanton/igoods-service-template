@@ -1,34 +1,10 @@
+require_relative '../../lib/consumer/base'
+
 module Rabbitmq
-  class App
-    include Import[
-      :bunny, 'bunny.connection',
-      'rabbitmq.routing',
-      :logger
-    ]
+  class App < Core::Consumer::Base
+    include Import[:bunny, 'bunny.connection', :logger]
 
-    def start(queue_name)
-      begin
-        logger.info 'Waiting for messages. To exit press CTRL+C'
-        consume_queue(bunny.queue(queue_name))
-      rescue Interrupt => _
-        logger.info 'Closing connection'
-
-        connection.close
-
-        exit(0)
-      end
-    end
-
-  private
-
-    def consume_queue(queue)
-      queue.subscribe(block: true) do |delivery_info, properties, body|
-        consumer = delivery_info[:consumer]
-
-        logger.tagged(consumer_tag: consumer.consumer_tag) do
-          routing.call(consumer.queue.name, JSON.parse(body, symbolize_names: true))
-        end
-      end
-    end
+    # [queue, event_name, version]
+    consume ['hello', 'test', 1], to: Container['rabbitmq.consumers.employees.created.v1']
   end
 end
