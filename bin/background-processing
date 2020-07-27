@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PROJECT_APPS=''
+bundle exec que ./config/enviroment.rb

@@ -11,7 +11,13 @@ class Container
   # business logic
   auto_register!('services/payments') do |config|
     config.memoize = true
-    config.instance(&:instance)
+    config.instance do |component|
+      if component.identifier[/workers/]
+        component.loader.constant
+      else
+        component.instance
+      end
+    end
   end
 
   # transport layer

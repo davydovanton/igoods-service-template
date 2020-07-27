@@ -30,6 +30,9 @@ gem 'dry-validation'
 # Message broker
 gem "bunny", ">= 2.9.2"
 
+# Background processing
+gem 'que'
+
 # Other
 gem 'bigdecimal', '1.4.2'
 gem 'rake'
