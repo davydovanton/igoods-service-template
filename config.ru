@@ -4,6 +4,8 @@ require "bundler/setup"
 require "hanami/api"
 require 'ddtrace'
 
+require_relative 'config/enviroment'
+
 Datadog.configure do |c|
   c.use :rack, application: 'ms-boilerplate'
 end
