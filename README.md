@@ -1,6 +1,5 @@
 # Outpayment Onix
 
-
 ## How to setup application
 
 ```
@@ -25,15 +24,8 @@ $ bundle exec rake db:clean
 $ bundle exec rake db:reset
 ```
 
-## Application commands
+## Service commands
 
 ```
-# start REPL console
-$ bin/console
-
-# start HTTP server
-$ bin/server
-
-# start rabbitmq server
-$ bin/rabbitmq-server
+$ bin/service -h
 ```

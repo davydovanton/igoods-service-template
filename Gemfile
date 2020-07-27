@@ -36,6 +36,7 @@ gem 'que'
 # Other
 gem 'bigdecimal', '1.4.2'
 gem 'rake'
+gem 'dry-cli'
 
 group :development do
 end

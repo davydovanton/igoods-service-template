@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-# frozen_string_literal: true
-
-require "bundler/setup"
-ENV['PROJECT_APPS'] = 'rabbitmq'
-
-require_relative '../config/enviroment'
-
-Container['rabbitmq.app'].start('hello')

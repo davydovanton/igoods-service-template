@@ -34,6 +34,8 @@ GEM
     dotenv (2.7.6)
     dry-auto_inject (0.7.0)
       dry-container (>= 0.3.4)
+    dry-cli (0.6.0)
+      concurrent-ruby (~> 1.0)
     dry-configurable (0.11.6)
       concurrent-ruby (~> 1.0)
       dry-core (~> 0.4, >= 0.4.7)
@@ -217,6 +219,7 @@ DEPENDENCIES
   database_cleaner
   ddtrace
   dotenv (~> 2.4)
+  dry-cli
   dry-monads
   dry-system
   dry-validation
