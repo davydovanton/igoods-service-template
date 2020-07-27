@@ -3,6 +3,8 @@
 
 require "bundler/setup"
 require "irb"
+
+ENV['PROJECT_APP'] = 'http,rabbitmq'
 require_relative "../config/enviroment"
 
 IRB.start

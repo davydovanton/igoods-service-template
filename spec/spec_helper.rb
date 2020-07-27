@@ -2,6 +2,7 @@
 
 # Require this file for unit tests
 ENV['PROJECT_ENV'] ||= 'test'
+ENV['PROJECT_APP'] = 'http,rabbitmq'
 
 require 'simplecov'
 require 'simplecov-json'
