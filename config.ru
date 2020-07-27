@@ -1,19 +1,8 @@
 # frozen_string_literal: true
 
+PROJECT_APP='http'
 require "bundler/setup"
-require "hanami/api"
-require 'ddtrace'
 
-Datadog.configure do |c|
-  c.use :rack, application: 'ms-boilerplate'
-end
+require_relative 'config/enviroment'
 
-use Datadog::Contrib::Rack::TraceMiddleware
-
-class App < Hanami::API
-  get "/health" do
-    status 200
-  end
-end
-
-run App.new
+run Container['http.app']

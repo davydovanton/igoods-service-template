@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "bundler/setup"
+require "irb"
+
+ENV['PROJECT_APPS'] = 'http,rabbitmq'
+require_relative "../config/enviroment"
+
+IRB.start

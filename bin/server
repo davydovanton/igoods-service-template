@@ -1,0 +1,4 @@
+#!/bin/bash
+
+PROJECT_APPS=http
+bundle exec rackup -p 9292
