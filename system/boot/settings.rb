@@ -7,8 +7,9 @@ Container.boot(:settings, from: :system) do
     Types = Core::Types
 
     key :project_env, Types::String
+    key :project_app, Types::String.default('main')
 
-    # key :database_url, Types::String.constrained(filled: true)
+    key :database_url, Types::String.constrained(filled: true)
     # key :database_connection_validation_timeout, Types::Coercible::Int.optional # in seconds
 
     key :logger_json_formatter, Types::String.optional

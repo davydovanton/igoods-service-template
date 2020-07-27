@@ -11,7 +11,9 @@ gem 'ddtrace'
 
 # persistance layer
 gem 'pg'
-gem 'sequel', '~> 4.48.0'
+gem 'sequel', '~> 4.49.0'
+gem 'rom', '~> 5.2.4'
+gem 'rom-sql', '~> 3.2.0'
 
 # Monitoring and logging
 gem 'rollbar'

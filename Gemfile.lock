@@ -111,6 +111,34 @@ GEM
     regexp_parser (1.7.1)
     rexml (3.2.4)
     rollbar (2.27.0)
+    rom (5.2.4)
+      rom-changeset (~> 5.2, >= 5.2.3)
+      rom-core (~> 5.2, >= 5.2.3)
+      rom-repository (~> 5.2, >= 5.2.2)
+    rom-changeset (5.2.3)
+      dry-core (~> 0.4)
+      rom-core (~> 5.2)
+      transproc (~> 1.0, >= 1.1.0)
+    rom-core (5.2.3)
+      concurrent-ruby (~> 1.1)
+      dry-container (~> 0.7)
+      dry-core (~> 0.4)
+      dry-equalizer (~> 0.2)
+      dry-inflector (~> 0.1)
+      dry-initializer (~> 3.0, >= 3.0.1)
+      dry-struct (~> 1.0)
+      dry-types (~> 1.0)
+      transproc (~> 1.0, >= 1.1.0)
+    rom-repository (5.2.2)
+      dry-core (~> 0.4)
+      dry-initializer (~> 3.0, >= 3.0.1)
+      rom-core (~> 5.2, >= 5.2.2)
+    rom-sql (3.2.0)
+      dry-core (~> 0.4)
+      dry-equalizer (~> 0.2)
+      dry-types (~> 1.0)
+      rom-core (~> 5.2, >= 5.2.1)
+      sequel (>= 4.49)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -141,7 +169,7 @@ GEM
     ruby2_keywords (0.0.2)
     semantic_logger (4.7.1)
       concurrent-ruby (~> 1.0)
-    sequel (4.48.0)
+    sequel (4.49.0)
     simplecov (0.18.5)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -149,6 +177,7 @@ GEM
     simplecov-json (0.2.1)
       json
       simplecov
+    transproc (1.1.1)
     unicode-display_width (1.7.0)
     xpath (3.2.0)
       nokogiri (~> 1.8)
@@ -170,11 +199,13 @@ DEPENDENCIES
   puma (~> 3.12.4)
   rake
   rollbar
+  rom (~> 5.2.4)
+  rom-sql (~> 3.2.0)
   rspec
   rubocop
   rubocop-rspec
   semantic_logger
-  sequel (~> 4.48.0)
+  sequel (~> 4.49.0)
   simplecov
   simplecov-json
 
