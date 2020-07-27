@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/hanami/controller.git
+  revision: 5993ee96408e70c3b2365aec1ff91940cdae7c91
+  tag: v2.0.0.alpha1
+  specs:
+    hanami-controller (2.0.0.alpha1)
+      hanami-utils (~> 2.0.alpha)
+      rack (~> 2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -89,6 +98,9 @@ GEM
       mustermann (~> 1.0)
       mustermann-contrib (~> 1.0)
       rack (~> 2.0)
+    hanami-utils (2.0.0.alpha1)
+      concurrent-ruby (~> 1.0)
+      transproc (~> 1.0)
     hansi (0.2.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
@@ -208,6 +220,7 @@ DEPENDENCIES
   dry-system
   dry-validation
   hanami-api
+  hanami-controller!
   pg
   puma (~> 3.12.4)
   rake

@@ -1,9 +1,16 @@
+require "hanami/action"
+
 module HTTP
   module Actions
     module Health
-      class Get
-        def call(env)
-          [200, {}, ['OK']]
+      class Get < Hanami::Action
+        include Import[
+          'hanami.action.configuration'
+        ]
+
+        def handle(req, res)
+          res.status  = 200
+          res.body    = "OK"
         end
       end
     end
