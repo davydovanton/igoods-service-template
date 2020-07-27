@@ -14,7 +14,7 @@ class Container < Dry::System::Container
     config.env = ENV['PROJECT_ENV']
   end
 
-  load_paths!('system', 'lib', 'apps')
+  load_paths!('system', 'lib', 'services', 'apps')
 
   auto_register!('lib') do |config|
     config.memoize = true
@@ -28,9 +28,10 @@ class Container < Dry::System::Container
   auto_register!('apps/http') do |config|
     config.memoize = true
     config.instance(&:instance)
+  end
 
-    # config.exclude do |component|
-    #   component.path =~ /entities/
-    # end
+  auto_register!('services/payments') do |config|
+    config.memoize = true
+    config.instance(&:instance)
   end
 end
