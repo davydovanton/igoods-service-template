@@ -1,4 +1,4 @@
-# Outpayment Onix
+# Igoods service template
 
 ## How to setup application
 
