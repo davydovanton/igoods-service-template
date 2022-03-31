@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 ruby '2.7.0'
 
 # http layer
-gem 'puma', '~> 3.12.4'
+gem 'puma', '~> 4.3.12'
 gem 'hanami-api'
 gem "hanami-controller", git: "https://github.com/hanami/controller.git", tag: "v2.0.0.alpha1"
 gem 'ddtrace'
